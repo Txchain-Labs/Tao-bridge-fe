@@ -1,0 +1,50 @@
+body {
+  --main-bg-color: #0C111D;
+  --secondary-bg-color: #121926;
+  --tertiary-bg-color: #1d2237;
+  --main-text-color: #FFF;
+  --secondary-text-color: #98A2B3;
+  --main-border-color: #202939;
+  --primary-button-color: #0E9193;
+  --primary-green-color: #26A69A;
+  --primary-red-color: #EB6D71;
+}
+
+body.light {
+  --main-bg-color: #fafafa;
+  --secondary-bg-color: #fff;
+  --tertiary-bg-color: #fafafa;
+  --main-text-color: #292929;
+  --secondary-text-color: #292929;
+  --main-border-color: #f3f3f3;
+  --primary-button-color: #292929;
+}
+
+body.light .vector-image {
+  filter: invert(0.75);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.section-title {
+  color: #9AA4B2;
+  margin: 8px 0;
+}
+
+.full-height {
+  height: 100%;
+}

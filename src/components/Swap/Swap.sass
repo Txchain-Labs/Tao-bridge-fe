@@ -1,0 +1,37 @@
+.swap-wrapper
+  width: 90vw
+  max-width: 1216px
+  margin: 0 auto
+  padding: 8px 32px
+  display: flex
+  flex-direction: column
+  row-gap: 8px
+  @media only screen and (max-width: 768px)
+    width: 100%
+    box-sizing: border-box
+    padding: 8px
+    flex-direction: column-reverse
+
+.swap-interface
+  margin-top: 32px
+  display: flex
+  gap: 8px
+  justify-content: center
+  @media only screen and (max-width: 768px)
+    flex-direction: column-reverse
+    margin-top: 0
+  &-details
+    width: 65%
+    flex: 0 0 65%
+    z-index: 1
+    @media only screen and (max-width: 768px)
+      width: 100%
+      flex: 0 0 100%
+
+.token-mini-charts-wrapper
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  gap: 8px
+  @media only screen and (max-width: 768px)
+    grid-template-columns: repeat(2, 1fr)

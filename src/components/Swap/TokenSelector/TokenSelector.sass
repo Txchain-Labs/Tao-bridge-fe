@@ -1,0 +1,56 @@
+.token-selector
+  position: absolute
+  max-width: 500px
+  max-height: 90vh
+  width: 100%
+  left: calc(50% - 250px)
+  top: 22%
+  bottom: 22%
+  padding: 20px
+  background: var(--secondary-bg-color)
+  border-radius: 16px
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  overflow: hidden
+  text-align: left
+  -webkit-box-pack: start
+  @media only screen and (max-width: 768px)
+    left: 16px
+    right: 16px
+    box-sizing: border-box
+    width: calc(100% - 2 * 16px)
+  &-list
+    margin: 0
+    padding: 0
+    list-style: none
+    height: 100%
+    overflow-y: scroll
+    li
+      display: flex
+      align-items: center
+      padding: 10px
+      cursor: pointer
+      &:not(:last-child)
+        border-bottom: 1px solid rgba(84, 190, 249, 0.05)
+      img
+        width: 24px
+        height: 24px
+        margin-right: 8px
+      .token-logo
+        margin-right: 8px
+  &-overlay
+    position: fixed
+    display: flex
+    -webkit-box-align: center
+    align-items: center
+    -webkit-box-pack: center
+    justify-content: center
+    inset: 0
+    background-color: rgba(0, 0, 0, 0.5)
+    -webkit-tap-highlight-color: transparent
+  &-modal
+    position: fixed
+    z-index: 1300
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0

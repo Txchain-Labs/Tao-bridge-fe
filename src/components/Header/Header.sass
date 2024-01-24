@@ -1,0 +1,109 @@
+.header
+  position: relative
+  display: flex
+  -webkit-box-align: center
+  align-items: center
+  -webkit-box-pack: justify
+  justify-content: space-between
+  padding: 16px 32px
+  z-index: 6
+  border-bottom: 1px solid var(--main-border-color)
+  @media only screen and (max-width: 768px)
+    padding: 8px 16px
+  &-nav
+    display: flex
+    &-open-icon
+      width: 25px
+      margin-left: 16px
+      z-index: 1
+      display: none
+      @media only screen and (max-width: 768px)
+        display: block
+    &-action-buttons
+      display: flex
+    &-menu
+      display: flex
+      align-items: flex-start
+      color: var(--main-text-color)
+      margin-top: auto
+      margin-bottom: auto
+      list-style: none
+      @media only screen and (max-width: 768px)
+        padding: 20%
+        display: flex
+        position: fixed
+        right: -100%
+        top: 0
+        bottom: 0
+        background: var(--main-bg-color)
+        flex-direction: column
+        align-items: center
+        z-index: 1
+        &.opened
+          right: 0
+          animation-name: slideFromRight
+          animation-duration: 0.3s
+        &.closed
+          right: -100%
+          animation-name: slideToRight
+          animation-duration: 0.3s
+        @keyframes slideFromRight
+          from
+            right: -100%
+          to
+            right: 0
+        @keyframes slideToRight
+          from
+            right: 0
+          to
+            right: -100%
+      &-overlay
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(0, 0, 0, 0.5)
+      &-item
+        height: 100%
+        -webkit-box-align: center
+        align-items: center
+        cursor: pointer
+        display: flex
+        position: relative
+        margin-left: 15px
+        margin-right: 15px
+        @media only screen and (max-width: 768px)
+          height: auto
+        a
+          font-weight: 500
+          font-size: 15px
+          line-height: 13px
+          color: var(--main-text-color)
+          height: 100%
+          display: flex
+          -webkit-box-align: center
+          align-items: center
+          width: 100%
+          text-decoration: none
+          @media only screen and (max-width: 768px)
+            font-size: 18px
+            padding: 20px 0
+        &.active
+          a
+            color: var(--primary-button-color)
+  button
+    background: var(--primary-button-color)
+    border: 1px solid var(--primary-button-color)
+    color: white
+    height: 47px
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    padding: 0 24px
+    border-radius: 14px
+    cursor: pointer
+  .colour-theme-switcher
+    background: none
+    border: none
+    color: var(--main-text-color)

@@ -1,0 +1,97 @@
+.token-details-chart
+  width: 100%
+  border-radius: 8px
+  background: var(--secondary-bg-color)
+  padding: 24px
+  box-sizing: border-box
+  @media only screen and (max-width: 768px)
+    padding: 16px
+  &-info
+    display: flex
+    padding: 13px 0
+    &.mobile-only
+      display: none
+      @media only screen and (max-width: 768px)
+        display: flex
+    @media only screen and (max-width: 768px)
+      flex-wrap: wrap
+      padding: 0
+      row-gap: 16px
+      position: relative
+      z-index: 1
+    > div, .price-high-and-low > div
+      border-right: 1px solid var(--main-border-color)
+      padding: 0 32px
+      display: flex
+      &:first-child
+        padding-left: 0
+      &:last-child
+        border: none
+      @media only screen and (max-width: 768px)
+        padding: 0 16px
+        &:nth-child(even)
+          border-right: none
+    .price-high-and-low
+      &.desktop-only
+        display: flex
+        @media only screen and (max-width: 768px)
+          display: none
+      > div
+        @media only screen and (max-width: 768px)
+          border: none
+          &:last-child
+            padding: 0
+      @media only screen and (max-width: 768px)
+        padding: 0
+        h3
+          font-size: 12px
+        p
+          font-size: 12px
+          gap: 2px
+    h3
+      color: var(--main-text-color)
+      font-size: 24px
+      font-style: normal
+      font-weight: 600
+      line-height: 32px
+      margin: 0
+      @media only screen and (max-width: 768px)
+        font-size: 16px
+        line-height: 1.2
+    p
+      color: var(--secondary-text-color)
+      font-size: 16px
+      font-style: normal
+      font-weight: 400
+      line-height: 24px
+      margin: 0
+      display: flex
+      align-items: center
+      gap: 4px
+    &-logo
+      width: 64px
+      height: 64px
+    &-main
+      flex-direction: row
+      align-items: center
+      gap: 12px
+      &-name
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 2px
+        @media only screen and (max-width: 768px)
+          gap: 0
+        h3
+          white-space: nowrap
+    &-data
+      flex-direction: column
+      justify-content: center
+      gap: 2px
+      @media only screen and (max-width: 768px)
+        gap: 0
+      img.rotated
+        transform: rotate(180deg)
+  &-graph
+    @media only screen and (max-width: 768px)
+      margin: -15px 0 -30px
